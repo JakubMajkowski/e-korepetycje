@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Strona z ogłoszeniami korepetytorów.">
+    <meta name="keywords" content="korepetycje, nauka, ekorepetycje, korepetytor">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.6, user-scalable=no">
+    <meta name="author" content="Jakub Majkowski">
+
+    <title>e-Korepetycje</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="shortcut icon" href="hat.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="all.css">
+    
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i><a href="#">e-Korepetycje</a>
+        </div>
+
+        <ul class="nav-links">
+            <ul>
+                <li><a href="#">Główna</a></li>
+                <li><a href="#">Ogłoszenia</a></li>
+                <li><a href="#">Opinie</a></li>
+                <div class="popup">
+                    <button onclick="document.getElementById('modal-wrapper').style.display='block'">Użytkownik</button>
+                </div>
+            </ul>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="progress-wrapper">
+        <div class="progress-label"></div>
+        <progress></progress>
+    </div>
+
+<!-- User Settings -->
+<div id="modal-wrapper" class="modal">
+
+  <form action="index.html" class="login-form">
+      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+      <h5><i class="fas fa-user-graduate"></i> Panel</h5>
+
+      <div class="txtb">
+        <button><i class="fa fa-cog"></i> Ustawienia</button>
+      </div>
+
+      <div class="txtb">
+        <button><i class="fas fa-edit"></i> Edytuj dane</button>
+      </div>
+
+      <div class="txtb">
+        <button><i class="fa fa-comments"></i> Wiadomości</button>
+      </div>
+
+      <div class="txtb">
+        <button><i class="fa fa-exclamation-triangle"></i> Zgłoś problem</button>
+      </div>
+
+      <div class="txtb">
+        <button><i class="fas fa-sign-out-alt"></i> Wyloguj</button>
+      </div>
+  </form>
+
+</div>
+<!-- End of User Settings -->
+
+  <div class="all">
+    <div class="user-icon"><div class="username">Oskar Migowski</div></div>
+
+    <div class="calendar disable-selection" id="calendar">
+      <div class="left-side">
+          <div class="current-day text-center">
+              <h1 class="calendar-left-side-day"></h1>
+              <div class="calendar-left-side-day-of-week"></div>
+          </div>
+          <div class="current-day-events">
+              <div>Wydarzenia:</div>
+              <ul class="current-day-events-list"></ul>
+          </div>
+          <div class="add-event-day">
+              <input type="text" class="add-event-day-field" placeholder="Utwórz wydarzenie!">
+              <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
+          </div>
+      </div>
+      <div class="right-side">
+          <div class="text-right calendar-change-year">
+              <div class="calendar-change-year-slider">
+                  <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+                  <span class="calendar-current-year"></span>
+                  <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+              </div>
+          </div>
+          <div class="calendar-month-list">
+              <ul class="calendar-month"></ul>
+          </div>
+          <div class="calendar-week-list">
+              <ul class="calendar-week"></ul>
+          </div>
+          <div class="calendar-day-list">
+              <ul class="calendar-days"></ul>
+          </div>
+      </div>
+  </div>
+
+  <script async src="all.js"></script>
+
+  <br><br><br><br><br><br><br><br>
+
+  <div class="todoList">
+      <div class="cover-inner">
+        <h4>Lista zadań</h4>
+      </div>
+    <div class="content">
+      <form class="add">
+        <input type="text" name="add" placeholder="Dodaj zadanie">
+        <div class="input-buttons">
+          <a href="#0" class="add-todo">
+            <i class="fas fa-plus add"></i>
+          </a>
+        </div>
+      </form>
+      <ul class="todos">
+        <li>
+          <input type="checkbox" id="todo_1">
+          <label for="todo_1">
+            <span class="check"></span>
+            Polski
+          </label>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_2">
+          <label for="todo_2">
+            <span class="check"></span>
+            Matematyka
+          </label>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_3">
+          <label for="todo_3">
+            <span class="check"></span>
+            Angielski
+          </label>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_4">
+          <label for="todo_4">
+            <span class="check"></span>
+            Informatyka
+          </label>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><s class="up"></s></button>
+
+    <footer>
+        <div class="foot">
+            Copyright © 2020 fejker.pl. Wszelkie prawa zastrzeżone.
+            Nasz serwis wykorzystuje mechanizm plików cookies.
+            <div class="foot-cont">
+                <a href="#"><h3><i class="fas fa-cookie-bite"></i> Polityka prywatności</h3></a>
+                <a href="#"><h3><i class="fas fa-scroll"></i> Regulamin</h3></a>
+                <a href="#"><h3><i class="fab fa-facebook"></i> Facebook</h3></a>
+                <a href="#"><h3><i class="fas fa-bullhorn"></i> Reklama</h3></a>
+            </div>   
+        </div> 
+    </footer>
+
+    <!---- Progress bar ---->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+        crossorigin="anonymous">
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous">
+</script>
+
+    <script>
+        // Progress bar
+        
+        $(document).ready(function() {
+        const win = $(window);
+        const doc = $(document);
+        const progressBar = $('progress');
+        const setValue = () => win.scrollTop();
+        const setMax = () => doc.height() - win.height();
+        const setPercent = () => Math.round(win.scrollTop() / (doc.height() - win.height()) * 100);
+        
+        progressBar.attr({ value: setValue(), max: setMax() });
+        
+        doc.on('scroll', () => {
+            progressBar.attr({ value: setValue() });
+        });
+        
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
